@@ -1,0 +1,13 @@
+ONIVISTA AGRO - RENDER DEPLOYMENT
+
+This project is configured for Render Docker web service deployment.
+
+1. Upload these project files to a GitHub repository (do not upload passwords or private data).
+2. In Render, choose New + > Web Service and connect the GitHub repository.
+3. Choose Docker as the runtime/language and select the Free plan if offered.
+4. Deploy. The server reads Render's PORT environment variable.
+5. In Render Environment settings, add ONIVISTA_ADMIN_PASSWORD with a strong unique password before sharing the admin page.
+
+IMPORTANT LIMITATIONS:
+- The current reviews.json is local file storage. Render free web services have ephemeral filesystems, so reviews may be lost on restart/redeploy/spin-down. Do not use this as production storage without moving reviews to a persistent database.
+- Do not share admin credentials publicly. Change the default admin password using ONIVISTA_ADMIN_PASSWORD.

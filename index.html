@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onivista Agro | Value-Added Agricultural Products</title>
+  <meta name="description" content="Onivista Agro Farmers Producer Company Limited — premium fried onion, dehydrated onion and value-added agricultural ingredients.">
+  <style>
+    :root{
+      --green:#0b6b45; --green2:#174f3b; --light:#f4f8f3;
+      --orange:#e58224; --dark:#17352a; --muted:#66756d; --white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #e8eee9;backdrop-filter:blur(8px)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--green);font-size:20px}
+    .brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:2px solid #e8eee9}
+    .links{display:flex;gap:26px;font-size:14px;font-weight:700}
+    .links a:hover{color:var(--orange)}
+    .btn{display:inline-block;padding:13px 21px;border-radius:30px;background:var(--green);color:#fff;font-weight:700;box-shadow:0 8px 22px rgba(11,107,69,.18)}
+    .btn:hover{background:var(--green2)}
+    .hero{background:linear-gradient(135deg,#eff8f1 0%,#fff 58%,#fff7ee 100%);padding:90px 0 80px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-block;color:var(--orange);font-weight:800;letter-spacing:1.4px;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-2px;margin-bottom:22px}
+    h1 span{color:var(--green)}
+    .hero p{font-size:19px;color:var(--muted);max-width:650px;margin-bottom:30px}
+    .actions{display:flex;gap:14px;flex-wrap:wrap}
+    .btn.alt{background:#fff;color:var(--green);border:1px solid #cfe0d5;box-shadow:none}
+    .hero-card{background:#fff;border-radius:28px;padding:28px;box-shadow:0 25px 60px rgba(23,53,42,.12);border:1px solid #e8eee9}
+    .hero-card img{width:100%;height:250px;object-fit:contain;border-radius:18px;background:#f8fbf7}
+    .hero-card h3{margin-top:18px;font-size:22px}
+    .hero-card p{font-size:15px;margin:7px 0 0}
+    section{padding:86px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 45px}
+    .section-head h2{font-size:40px;line-height:1.1;margin-bottom:12px}
+    .section-head p{color:var(--muted)}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about h2{font-size:42px;line-height:1.1;margin-bottom:18px}
+    .about p{color:var(--muted);margin-bottom:16px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+    .stat{background:#fff;border-radius:18px;padding:18px;text-align:center;border:1px solid #e1ebe4}
+    .stat strong{display:block;font-size:25px;color:var(--green)}
+    .stat small{color:var(--muted)}
+    .values{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+    .value{background:#fff;padding:22px;border-radius:18px;border:1px solid #e3ece6}
+    .value b{display:block;margin-bottom:5px}
+    .value span{font-size:14px;color:var(--muted)}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .product{border:1px solid #e1ebe4;border-radius:22px;padding:28px;background:#fff;transition:.25s}
+    .product:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(23,53,42,.10)}
+    .icon{width:58px;height:58px;border-radius:16px;background:#edf7ef;display:grid;place-items:center;font-size:28px;margin-bottom:20px}
+    .product h3{font-size:21px;margin-bottom:8px}
+    .product p{font-size:14px;color:var(--muted)}
+    .process{background:var(--light)}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .step{background:#fff;padding:22px 15px;border-radius:18px;text-align:center;border:1px solid #e1ebe4}
+    .step strong{display:grid;place-items:center;margin:0 auto 12px;width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff}
+    .step span{font-size:14px;font-weight:700}
+    .why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .why .item{padding:28px;border-radius:20px;background:linear-gradient(145deg,#f8fbf8,#fff);border:1px solid #e4ece7}
+    .item h3{margin:12px 0 7px}.item p{color:var(--muted);font-size:14px}
+    .contact{background:var(--green2);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+    .contact h2{font-size:44px;line-height:1.1;margin-bottom:16px}
+    .contact p{color:#d7e8df}
+    .contact-box{background:#fff;color:var(--dark);padding:28px;border-radius:22px}
+    .contact-row{padding:13px 0;border-bottom:1px solid #e6ece8}
+    .contact-row:last-child{border-bottom:0}
+    .contact-row b{display:block;font-size:13px;text-transform:uppercase;color:var(--green);letter-spacing:.8px}
+    footer{background:#10271f;color:#cbd9d3;padding:24px 0;font-size:13px}
+    footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:850px){
+      .links{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .products,.why{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .hero{padding-top:55px}.section-head h2,.about h2,.contact h2{font-size:34px}
+    }
+    @media(max-width:520px){.stats,.values{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+
+    .reviews{background:#fff}
+    .review-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}
+    .review-form,.review-list{background:#f8fbf8;border:1px solid #e1ebe4;border-radius:22px;padding:26px}
+    .review-form h3,.review-list h3{margin-bottom:14px}
+    .review-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.live-badge{font-size:12px;font-weight:800;color:var(--green);background:#e8f5ed;border-radius:20px;padding:6px 10px}
+    .review-form input,.review-form textarea,.review-form select{width:100%;padding:13px 14px;border:1px solid #d7e4db;border-radius:12px;margin:7px 0 13px;font:inherit;background:#fff}
+    .review-form textarea{min-height:120px;resize:vertical}
+    .review-form label{font-size:13px;font-weight:700}
+    .review-card{background:#fff;border:1px solid #e1ebe4;border-radius:16px;padding:18px;margin-bottom:13px}
+    .review-card:last-child{margin-bottom:0}
+    .review-stars{color:#e58224;letter-spacing:2px;font-size:18px}
+    .review-card p{color:var(--muted);margin:7px 0}
+    .review-card small{color:#7b8982}
+    .review-message{font-size:13px;margin-top:10px;color:var(--green);font-weight:700}
+    .empty-reviews{color:var(--muted);text-align:center;padding:25px}
+    @media(max-width:850px){.review-layout{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home"><img src="onivista-logo.jpg" alt="Onivista Agro logo"><span>ONIVISTA AGRO</span></a>
+      <div class="links">
+        <a href="#about">About</a><a href="#products">Products</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn" href="#contact">Business Enquiry</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Farm • Process • Value • Impact</span>
+      <h1>From <span>farm produce</span> to premium food ingredients.</h1>
+      <p>Onivista Agro Farmers Producer Company Limited transforms agricultural produce into consistent, high-quality value-added products for food businesses in India and global markets.</p>
+      <div class="actions">
+        <a class="btn" href="#products">Explore Products</a>
+        <a class="btn alt" href="#contact">Talk to Our Team</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="onivista-logo.jpg" alt="Onivista Agro">
+      <h3>Built around farmer value.</h3>
+      <p>Direct sourcing, modern processing, quality control and dependable supply — connected in one farm-to-market model.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <span class="eyebrow">Who we are</span>
+      <h2>Creating value beyond the farm gate.</h2>
+      <p>Onivista Agro is a professionally managed food-processing company focused on premium fried onion, dehydrated onion and other value-added agricultural ingredients.</p>
+      <p>Our model connects farmers, processing, quality assurance, packaging and distribution to reduce post-harvest losses and build stronger market opportunities.</p>
+      <div class="stats">
+        <div class="stat"><strong>Farm</strong><small>Direct sourcing</small></div>
+        <div class="stat"><strong>Quality</strong><small>Controlled processing</small></div>
+        <div class="stat"><strong>Market</strong><small>India & export</small></div>
+      </div>
+    </div>
+    <div class="values">
+      <div class="value"><b>Farmer-first</b><span>Better value realization through organized procurement and value addition.</span></div>
+      <div class="value"><b>Food safety</b><span>Hygienic manufacturing and standardized production practices.</span></div>
+      <div class="value"><b>Consistency</b><span>Batch-wise monitoring and specifications designed for B2B buyers.</span></div>
+      <div class="value"><b>Partnership</b><span>Reliable supply and long-term relationships with customers and distributors.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our products</span>
+      <h2>Premium onion products for modern food businesses.</h2>
+      <p>Designed for food manufacturers, HoReCa, wholesalers, distributors, retailers and export markets.</p>
+    </div>
+    <div class="products">
+      <article class="product"><div class="icon">🧅</div><h3>Fresh Fried Onion</h3><p>Golden, crispy fried onion (Birista) with consistent taste, aroma and texture for biryani, gravies, ready-to-eat foods and food-service applications.</p></article>
+      <article class="product"><div class="icon">🌾</div><h3>Dehydrated Onion</h3><p>Processed to preserve flavour and quality while extending shelf life. Suitable for seasoning blends, convenience foods and food processing.</p></article>
+      <article class="product"><div class="icon">📦</div><h3>Customized Supply</h3><p>Bulk supply, packaging options and business-to-business solutions for distributors, private-label partners and institutional buyers.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Manufacturing</span>
+      <h2>Quality built into every stage.</h2>
+      <p>Standardized processing supports traceability, consistency and food safety.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><strong>1</strong><span>Cleaning</span></div>
+      <div class="step"><strong>2</strong><span>Sorting</span></div>
+      <div class="step"><strong>3</strong><span>Peeling & slicing</span></div>
+      <div class="step"><strong>4</strong><span>Frying / dehydration</span></div>
+      <div class="step"><strong>5</strong><span>Grading & packaging</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Onivista</span>
+      <h2>A dependable value-add partner.</h2>
+    </div>
+    <div class="why">
+      <div class="item"><div class="icon">🌱</div><h3>Farmer connected</h3><p>Organized procurement and value addition designed to create sustainable agricultural value.</p></div>
+      <div class="item"><div class="icon">✓</div><h3>Quality focused</h3><p>Controlled processes, hygiene and batch-wise monitoring support dependable product quality.</p></div>
+      <div class="item"><div class="icon">🌍</div><h3>Market ready</h3><p>Solutions designed for domestic buyers as well as international and export-oriented requirements.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Customer Reviews</span>
+      <h2>What our customers say.</h2>
+      <p>Customers can submit their experience. Approved reviews are displayed here automatically.</p>
+    </div>
+    <div class="review-layout">
+      <form class="review-form" id="reviewForm">
+        <h3>Share your review</h3>
+        <label for="reviewName">Your name</label>
+        <input id="reviewName" name="name" required maxlength="60" placeholder="Enter your name">
+        <label for="reviewRating">Rating</label>
+        <select id="reviewRating" name="rating" required>
+          <option value="5">★★★★★ — 5</option>
+          <option value="4">★★★★☆ — 4</option>
+          <option value="3">★★★☆☆ — 3</option>
+          <option value="2">★★☆☆☆ — 2</option>
+          <option value="1">★☆☆☆☆ — 1</option>
+        </select>
+        <label for="reviewText">Your review</label>
+        <textarea id="reviewText" name="review" required maxlength="500" placeholder="Tell us about your experience"></textarea>
+        <button class="btn" type="submit" style="border:0;cursor:pointer">Submit Review</button>
+        <div class="review-message" id="reviewMessage"></div>
+      </form>
+      <div class="review-list">
+        <div class="review-list-head"><h3>Customer reviews</h3><span class="live-badge">● Live</span></div>
+        <div id="reviewsList"><div class="empty-reviews">Loading reviews...</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <span class="eyebrow" style="color:#f2a15a">Let's work together</span>
+      <h2>Looking for a reliable onion-products partner?</h2>
+      <p>Contact Onivista Agro for bulk supplies, product information, customized packaging and business partnerships.</p>
+      <br>
+      <a class="btn" style="background:#e58224" href="mailto:onivistaagro.fpc@gmail.com">Send an Email</a>
+    </div>
+    <div class="contact-box">
+      <div class="contact-row"><b>Marketing</b>Prasad Gaykhe — Managing Director, Marketing</div>
+      <div class="contact-row"><b>Mobile</b><a href="tel:+917620417517">+91 76204 17517</a></div>
+      <div class="contact-row"><b>Email</b><a href="mailto:onivistaagro.fpc@gmail.com">onivistaagro.fpc@gmail.com</a></div>
+      <div class="contact-row"><b>Registered Office</b>1106, Bldg 03, 86 Central, Andheri Ghatkopar Link Road, Mumbai - 400086, Maharashtra, India</div>
+      <div class="contact-row"><b>Manufacturing Facility</b>Velapur, Tal. Kopargaon, Dist. Ahilyanagar, Maharashtra - 423604</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Onivista Agro Farmers Producer Company Limited</span>
+    <span>CIN: U01199MH2025PTC464142 • GSTIN: 27AAECO9961H1ZY</span>
+  </div>
+</footer>
+
+<script>
+const reviewsList = document.getElementById('reviewsList');
+const reviewForm = document.getElementById('reviewForm');
+const reviewMessage = document.getElementById('reviewMessage');
+function renderReviews(reviews){
+  if(!reviews.length){ reviewsList.innerHTML='<div class="empty-reviews">No approved reviews yet. Be the first to share your experience.</div>'; return; }
+  reviewsList.innerHTML=reviews.map(r=>{
+    const stars='★'.repeat(r.rating)+'☆'.repeat(5-r.rating);
+    return `<article class="review-card"><div class="review-stars">${stars}</div><p>${escapeHtml(r.review)}</p><small>— ${escapeHtml(r.name)}</small></article>`;
+  }).join('');
+}
+function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+async function loadReviews(){
+  if(location.protocol !== 'http:' && location.protocol !== 'https:'){
+    reviewsList.innerHTML='<div class="empty-reviews">Please open the website using http://localhost:3000 (not by double-clicking index.html).</div>';
+    return;
+  }
+  try{
+    const res=await fetch('/api/reviews',{cache:'no-store'});
+    if(!res.ok) throw new Error('Server returned '+res.status);
+    const data=await res.json();
+    renderReviews(data.reviews||[]);
+  }catch(e){
+    reviewsList.innerHTML='<div class="empty-reviews">Unable to connect to the Java server. Please run start.bat and open http://localhost:3000</div>';
+  }
+}
+reviewForm.addEventListener('submit',async e=>{
+  e.preventDefault(); reviewMessage.textContent='Submitting...';
+  const payload=Object.fromEntries(new FormData(reviewForm)); payload.rating=Number(payload.rating);
+  try{
+    const res=await fetch('/api/reviews',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await res.json();
+    if(!res.ok) throw new Error(data.error||'Unable to submit review');
+    reviewForm.reset(); reviewMessage.textContent='Thank you! Your review was submitted and is waiting for approval.';
+  }catch(err){
+    reviewMessage.textContent='Unable to connect to the Java server. Please run start.bat and open http://localhost:3000';
+  }
+});
+loadReviews();
+</script>
+</body>
+</html>
